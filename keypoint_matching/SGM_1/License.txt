@@ -1,0 +1,25 @@
+
+This is an implementation of the StableGM framework. 
+
+stableMatching folder contains our implementations related to stable matching algorithm and the contrastive matching loss. 
+
+The code in  the stableMatching folder is open source and is offered on an 'as is' basis, without any warranties (expressed or implied).
+
+_____________________________________________________________________________________________________________________________________________
+
+To evaluate stableGM framework, we have adapted Thinkmatch - https://github.com/Thinklab-SJTU/ThinkMatch implementation. Thus, the src and models folders and eval.py, tran_eval.ipynb files contain code obtained/modified from Thinkmatch -Copyright (c) 2021 Thinklab@SJTU.
+
+The License information of Thinkmatch is as follows:
+
+Copyright (c) 2021 Thinklab@SJTU
+
+ThinkMatch is licensed under Mulan PSL v2. You can use this software according
+to the terms and conditions of the Mulan PSL v2.
+
+You may obtain a copy of Mulan PSL v2 at: http://license.coscl.org.cn/MulanPSL2
+
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+
+See the Mulan PSL v2 for more details.

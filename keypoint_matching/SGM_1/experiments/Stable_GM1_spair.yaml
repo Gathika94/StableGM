@@ -1,0 +1,70 @@
+MODEL_NAME: sgm1_spair
+DATASET_NAME: spair71k
+
+DATASET_FULL_NAME: SPair71k
+
+MODULE: models.SGM1.model
+
+BACKBONE: VGG16_bn_final
+
+BATCH_SIZE: 8
+DATALOADER_NUM: 2
+FP16: False
+
+RANDOM_SEED: 123
+
+
+STATISTIC_STEP: 100
+
+
+GPUS:
+  - 0
+
+PROBLEM:
+  TYPE: 2GM
+  RESCALE:  
+    - 256
+    - 256
+  FILTER: 'intersection'
+
+
+GRAPH:
+  SRC_GRAPH_CONSTRUCT: tri
+  TGT_GRAPH_CONSTRUCT: tri
+  SYM_ADJACENCY: True
+
+
+TRAIN:
+  
+  START_EPOCH: 0
+  NUM_EPOCHS: 30
+
+  LOSS_FUNC: cml
+
+  OPTIMIZER: Adam
+
+  
+  LR: 5.e-4
+  SEPARATE_BACKBONE_LR: True
+  BACKBONE_LR: 1.e-5
+  MOMENTUM: 0.9
+  LR_DECAY: 0.5
+  LR_STEP:  
+    - 2
+    - 4
+    - 6
+    - 8
+    - 10
+
+  EPOCH_ITERS: 400  
+
+  CLASS: none
+
+
+EVAL:
+  EPOCH: 14  
+  SAMPLES: 1000  
+
+
+SGM1:
+  FEATURE_CHANNEL: 1024
